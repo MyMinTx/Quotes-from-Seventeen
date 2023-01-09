@@ -1,0 +1,162 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /*ตำแหน่ง*/
+    text-align:center;
+    background-image:url(./offon/off.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    padding:0;
+    margin:0;
+    color: #fff; 
+}
+/*ก้อนoff*/
+.wrap {
+    text-align: right;
+    margin:5px;
+    margin-left: 20px;
+    margin-right: 50px;
+    padding-top: 25px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 80px;
+}
+
+.switch input {
+    visibility: hidden;
+}
+
+.slider {
+    position:absolute;
+    cursor: pointer;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    background: #3e3f3f;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: -5px -5px 8px rgba(56, 1, 1, 0.2)
+    ,5px 5px 8px rgba(0, 0, 0,0.2);
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 50px;
+    background: rgb(255, 255, 255);
+    left: 4px;
+    bottom: 15px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+h1 {
+    margin-right: 66px;
+}
+
+input:checked + .slider {
+    background: #fc7e43;
+}
+
+input:checked + .slider::before {
+    transform: translateX(150px);
+}
+
+.slider.round {
+    border-radius: 50px;
+}
+.slider.round::before {
+    border-radius: 50%;
+}
+
+.lights-on {
+    background-image: url(./offon/on.jpg);
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    position:relative;
+    top: 20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 300px;
+    width: 500px;
+    background-color: white;
+    margin:0 auto;
+    border-radius: 20px;
+    box-shadow: 0 25px 31px black;
+    position: relative;
+}
+.header{
+    color: black;
+    position: absolute;
+    top: 5px;
+    font-size: 30px   
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* x*/
+    align-items: center; /* y*/
+    gap: 3px;
+}
+
+.main-content .writer {
+    letter-spacing: 3px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+
+.text-area {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    line-height: 1.2;
+}
+
+.mainPosition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 20%;
+}
+
+.btn{
+    font-size: 100px;
+    margin-bottom: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-60%);
+}
+#Qbtn{
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border:none;
+    outline: none;
+}
+
+#Qbtn:active {
+    background-color: #037de7;
+    color: black;
+}
